@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Get Monkeytype Text",
+  "version": "1.0.0",
+  "description": "Extension that gets current text from monkeytype.com",
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": "icons/logo_x512.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://monkeytype.com/*"
+      ],
+      "js": ["content/index.js"]
+    }
+  ]
+}
